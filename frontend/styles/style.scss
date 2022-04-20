@@ -1,0 +1,273 @@
+/*#loginDot {
+  background-color: green;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+}
+section {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+img {
+  width: 50px;
+}*/
+
+body {
+  background-color: #3D4252;
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  background-color: white;
+  color: #3D4252;
+  text-align: center;
+  width: 100vw;
+  margin: 0;
+  padding: 10px;
+
+}
+
+button {
+  background-color: white;
+  color:#3D4252;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  margin: 4px 0;
+  font-size: 15px;
+  padding:10px
+}
+
+img {
+  width: 100px;
+  padding: 20px;
+}
+
+.login-section {
+  position: absolute;
+  top: 20vh;
+
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    align-self: center;
+  }
+}
+
+.login-button {
+  background-color: #538bc9;
+  color: white;
+}
+
+.register-button {
+  background-color: #ffc600;
+  color: white;
+}
+
+.logged-in-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  color: #3D4252;
+
+  h2 {
+    margin: 14px 0;
+  }
+
+  button {
+    background-color: #a15e9b;
+    color: white;
+    margin: 0 10px 0 20px
+  }
+}
+
+.login-dot {
+  background-color: #9cdad0;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.profile-section {
+  padding-top: 10vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    background-color: #FCADC5;
+    color: white;
+  }
+}
+
+.my-books-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+
+.button-div {
+  padding: 20px;
+
+  :nth-child(1) {
+    background-color:#538bc9;
+    color: white;
+  }
+
+  :nth-child(2) {
+    background-color: #5c6abd;
+    color: white;
+  }
+}
+
+.library-section {
+  display: flex;
+  justify-content: center;
+
+  >div {
+    margin: 10px;
+    padding: 20px;
+    background-color: #505563;
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    min-width: 300px;
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  article {
+    margin-bottom: 40px;
+    
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+.upload-section {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 600px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  fieldset {
+    max-width: 300px;
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: #ffc600;
+    color: white;
+  }
+}
+
+.file-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.file-upload::file-selector-button {
+  background-color: white;
+  color:#3D4252;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden {
+  display: none;
+}
+
+
+
+
+

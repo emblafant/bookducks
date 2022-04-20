@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "genres",
+  "info": {
+    "singularName": "genre",
+    "pluralName": "genres",
+    "displayName": "genre",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "genre": {
+      "type": "string"
+    },
+    "audio_books": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::audio-book.audio-book",
+      "inversedBy": "genres"
+    },
+    "books": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::book.book",
+      "inversedBy": "genres"
+    }
+  }
+}

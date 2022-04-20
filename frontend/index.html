@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <h1>BookDucks</h1>
+  <section id="loggedInSection" class="hidden logged-in-section">
+    <h2 id="username"></h2>
+    <div class="login-dot"></div>
+    <button id="logoutBtn" onclick="logout()">Logga Ut</button>
+  </section>
+  <section id="profileSection" class="hidden profile-section">
+
+  </section>
+  <section id="loginSection" class="login-section">
+    <h2>Logga In</h2>
+    <label for="usernameLogin">Användarnamn:</label>
+    <input type="text" id="usernameLogin" required>
+    <label for="passwordLogin">Lösenord:</label>
+    <input type="password" id="passwordLogin" required>
+    <button id="loginBtn" class="login-button" onclick="login()">Logga in</button>
+    <h2>Skapa Användare</h2>
+    <label for="usernameRegister">Användarnamn:</label>
+    <input type="text" id="usernameRegister" required>
+    <label for="emailRegister">Email:</label>
+    <input type="email" id="emailRegister" required>
+    <label for="passwordRegister">Lösenord:</label>
+    <input type="password" id="passwordRegister" required>
+    <button id="registerBtn" class="register-button" onclick="register()">Skapa Användare</button>
+  </section>
+<div id ="buttonDiv" class="button-div hidden">
+  <button id="showLibraryBtn" onclick="renderLibrary()">Utlåning</button>
+  <button id="showUploadBtn" onclick="renderUpload()">Låna Ut</button>
+</div>
+  <section id="librarySection" class="hidden library-section">
+    <div>
+      <h2>Böcker</h2>
+      <ul id="bookUl"></ul>
+    </div>
+    <div>
+      <h2>Ljudböcker</h2>
+      <ul id="audioBookUl"></ul>
+    </div>
+  </section>
+  <section id="uploadSection" class="hidden upload-section">
+    <h2>Låna ut Böcker</h2>
+    <article id="uplaodBookSection">
+      <h3>Låna ut Bok:</h3>
+      <form>
+        <label for="titleBook">Titel:</label>
+        <input type="text" id="titleBook" required>
+        <label for="authorBook">Författare:</label>
+        <input type="text" id="authorBook" required>
+        <label for="pagesBook">Antal Sidor:</label>
+        <input type="number" id="pagesBook" required>
+        <label for="ratingBook">Betyg:</label>
+        <input type="number" id="ratingBook" min="1" max="10" required placeholder="1-10"> 
+        <fieldset id="checkboxFieldsetBook"></fieldset>
+        <div class="file-div">
+          <label for="imgBook">Omslagsbild:</label>
+          <input type="file" id="imgBook" class="file-upload">
+        </div>
+        <button id="uploadBookBtn" onclick="uploadBook()">Låna ut Bok</button>
+      </form>
+    </article>
+    <article id="uplaodAudioBookSection">
+      <h3>Låna ut Ljudbok:</h3>
+      <form>
+        <label for="titleAudioBook">Titel:</label>
+      <input type="text" id="titleAudioBook" required>
+      <label for="dateAudioBook">Datum:</label>
+      <input type="date" id="dateAudioBook" required>
+      <label for="lengthAudioBook">Längd:</label>
+      <input type="number" id="lengthAudioBook" required placeholder="Min">
+      <label for="ratingAudioBook">Betyg:</label>
+      <input type="number" id="ratingAudioBook" min="1" max="10" required placeholder="1-10"> 
+      <fieldset id="checkboxFieldsetAudioBook"></fieldset>
+      <div class="file-div">
+        <label for="imgAudioBook">Omslagsbild:</label>
+        <input type="file" id="imgAudioBook" class="file-upload">
+      </div>
+      <button id="uploadAudioBookBtn" onclick="uploadAudioBook()">Låna ut Ljudbok</button>
+      </form>
+    </article>
+  </section>
+  <script src="main.js"></script>
+</body>
+</html>
